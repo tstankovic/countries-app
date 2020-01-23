@@ -65,8 +65,6 @@ window.addEventListener('load', () => {
     output.innerHTML = '';
     if (fetchedData.message !== 'Not Found') {
       sortParam.style.display = 'block';
-      sortParam.style.width = '60%';
-      sortParam.className += ' mx-auto';
       sortOpt.style.display = 'block';
       populateOutput(fetchedData);
     }
@@ -75,9 +73,9 @@ window.addEventListener('load', () => {
   const populateOutput = data => {
     data.forEach(element => {
       const el = document.createElement('div');
-      el.className = 'card mx-auto mt-4 bg-secondary';
-      el.setAttribute('style', 'width:50%;');
+      el.className = 'col-4 mt-4';
       el.innerHTML = `
+            <div class="card bg-secondary">
                 <img class="card-img-top" src="${element.flag}">
                 <div class="card-body">
                     <h3 class="card-title">${element.name} / ${element.nativeName}</h5>
@@ -94,6 +92,7 @@ window.addEventListener('load', () => {
                         Find on Google Maps
                     </a>
                 </div>
+            </div>
             `;
       output.appendChild(el);
     });

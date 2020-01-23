@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Countries App</title>
-</head>
+  </head>
 
-<body class="text-white bg-dark" style="font-family:Arial, Helvetica, sans-serif">
+  <body
+    class="text-white bg-dark"
+    style="font-family:Arial, Helvetica, sans-serif"
+  >
     <div class="container text-center">
-        <div>
-            <img src="img/flags.gif" width="70%" height="160px">
-            <h1 class="display-4">Welcome to Countries App</h1>
-            <p class="lead">Here you can search countries based on different parameters to find out more about them!</p>
+      <div class="row mb-2">
+        <div class="col-10 mx-auto">
+          <img src="img/flags.gif" width="100%" height="150px" />
+          <h1 class="display-4">Welcome to Countries App</h1>
+          <p class="lead">
+            Here you can search countries based on different parameters to find
+            out more about them!
+          </p>
         </div>
+      </div>
 
-        <div class="mx-auto" style="width:50%;">
-            <input type="text" id="search-text" class="form-control" placeholder="Search query">
-            <select id="search-param" class="custom-select mt-2">
-                <option value="">Search parameter (name)</option>
-                <option value="full-name">Full Name</option>
-                <option value="lang">Language</option>
-                <option value="capital">Capital</option>
-                <option value="region">Region</option>
-                <option value="regionalbloc">Regional Block</option>
-            </select>
-            <button id="search" class="mt-2 btn btn-primary btn-block">Search</button>
+      <div class="row">
+        <div class="col-8 mx-auto">
+          <input
+            type="text"
+            id="search-text"
+            class="form-control"
+            placeholder="Search query"
+          />
+          <select id="search-param" class="custom-select mt-2">
+            <option value="">Search parameter (name)</option>
+            <option value="full-name">Full Name</option>
+            <option value="lang">Language</option>
+            <option value="capital">Capital</option>
+            <option value="region">Region</option>
+            <option value="regionalbloc">Regional Block</option>
+          </select>
+          <button id="search" class="mt-2 btn btn-primary btn-block">
+            Search
+          </button>
         </div>
+      </div>
 
-        <div class="mt-4 mx-auto" style="width:50%">
-            <span id="count"></span>
-            <select id="sort-param" class="custom-select mt-2" style="display:none">
-                <option value="">Sort parameter</option>
-                <option value="name">Alphabetical</option>
-                <option value="area">Area</option>
-                <option value="population">Population</option>
-            </select>
-            <div id="sort-opt" class="mt-1" style="display: none;">
-                <label class="checkbox-inline mr-1"><input type="checkbox" value="1" checked>ASC</label>
-                <label class="checkbox-inline ml-1"><input type="checkbox" value="-1">DESC</label>
-            </div>
+      <div class="row">
+        <div class="col-4 mx-auto mt-2">
+          <span id="count"></span>
+          <select
+            id="sort-param"
+            class="custom-select mt-2"
+            style="display:none"
+          >
+            <option value="">Sort parameter</option>
+            <option value="name">Alphabetical</option>
+            <option value="area">Area</option>
+            <option value="population">Population</option>
+          </select>
+          <div id="sort-opt" class="mt-1" style="display: none;">
+            <label class="checkbox-inline mr-1"
+              ><input type="checkbox" value="1" checked />ASC</label
+            >
+            <label class="checkbox-inline ml-1"
+              ><input type="checkbox" value="-1" />DESC</label
+            >
+          </div>
         </div>
+      </div>
 
-        <div id="output" class="mt-4">
+      <div id="output" class="row"></div>
 
-        </div>
-
-        <button id="btn-top" title="Go to top">Top</button>
+      <button id="btn-top" title="Go to top">Top</button>
     </div>
 
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
