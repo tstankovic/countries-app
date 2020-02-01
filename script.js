@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
   const populateOutput = data => {
     data.forEach(element => {
       const el = document.createElement('div');
-      el.className = 'col-4 mt-4';
+      el.className = 'col-10 mx-auto col-lg-4 mt-4';
       el.innerHTML = `
             <div class="card bg-secondary">
                 <img class="card-img-top" src="${element.flag}">
