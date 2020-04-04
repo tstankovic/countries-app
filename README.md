@@ -1,4 +1,4 @@
 # countries-app
-Simple app that uses REST Countries API
+Simple JavaScript app that interacts with REST Countries API.
 
-Displaying countries information based on search parameter
+Displaying countries information based on search parameters.
